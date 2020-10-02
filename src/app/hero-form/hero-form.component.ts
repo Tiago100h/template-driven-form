@@ -6,7 +6,7 @@ import { Hero } from '../hero';
   templateUrl: './hero-form.component.html',
   styleUrls: ['./hero-form.component.css']
 })
-export class HeroFormComponent implements OnInit {
+export class HeroFormComponent {
 
   powers = [
     'Really Smart',
@@ -18,16 +18,6 @@ export class HeroFormComponent implements OnInit {
   model = new Hero(18, 'Dr IQ', this.powers[0], 'Chuck Overstreet');
 
   submitted = false;  
-
-  // TODO: Remove this when we're done
-  get diagnostic() {
-    return JSON.stringify(this.model);
-  }
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
   onSubmit() {
     this.submitted = true;
